@@ -13,11 +13,11 @@ input {
 }
 
 .orange {
-  background-color: #ff6600;
+  background-color: #eaee07;
 }
 
 .background-gray {
-  background-color: rgb(246, 246, 239);
+  background: #272727;
 }
 
 .f11 {
@@ -29,7 +29,7 @@ input {
 }
 
 .button {
-  font-family: monospace;
+  
   font-size: 10pt;
   color: black;
   background-color: buttonface;

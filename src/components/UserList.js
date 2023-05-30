@@ -14,6 +14,7 @@ import Paper from '@mui/material/Paper';
 const GET_USERS = gql`
   {
     users {
+      id
       username
       stats {
         wins
@@ -55,15 +56,17 @@ const UserList = () => {
   }
 
   return(
-    <TableContainer component={Paper}>
-      <Table sx={{ minWidth: 650 }} aria-label="simple table">
+    <div>
+    <TableContainer component={Paper} style={
+      {background: "#272727", color: "#ffffff" }}>
+      <Table sx={{ minWidth: 650, color: "#ffffff" }} aria-label="simple table">
         <TableHead>
           <TableRow>
-            <TableCell>Username</TableCell>
-            <TableCell align="right">Wins</TableCell>
-            <TableCell align="right">Defeats</TableCell>
-            <TableCell align="right">K/D/A</TableCell>
-            <TableCell align="right">Headshot Accuracy&nbsp;(%)</TableCell>
+            <TableCell  style={{color:"#ffffff"}}>Username</TableCell>
+            <TableCell  style={{color:"#ffffff"}}align="right">Wins</TableCell>
+            <TableCell  style={{color:"#ffffff"}} align="right">Defeats</TableCell>
+            <TableCell  style={{color:"#ffffff"}}align="right">K/D/A</TableCell>
+            <TableCell  style={{color:"#ffffff"}} align="right">Headshot Accuracy&nbsp;(%)</TableCell>
           </TableRow>
         </TableHead>
         <TableBody>
@@ -72,18 +75,20 @@ const UserList = () => {
               key={row.id}
               sx={{ '&:last-child td, &:last-child th': { border: 0 } }}
             >
-              <TableCell component="th" scope="row">
+              <TableCell component="th" scope="row"style={{color:"#128b53"}} >
                 {row.username}
               </TableCell>
-              <TableCell align="right">{row.wins}</TableCell>
-              <TableCell align="right">{row.defeat}</TableCell>
-              <TableCell align="right">{row.kda}</TableCell>
-              <TableCell align="right">{row.headshotAccuracy}</TableCell>
+              <TableCell style={{color:"#eaee07"}} align="right">{row.wins}</TableCell>
+              <TableCell style={{color:"#eaee07"}} align="right">{row.defeat}</TableCell>
+              <TableCell style={{color:"#eaee07"}} align="right">{row.kda}</TableCell>
+              <TableCell style={{color:"#eaee07"}} align="right">{row.headshotAccuracy}</TableCell>
             </TableRow>
           ))}
         </TableBody>
       </Table>
     </TableContainer>
+
+    </div>
   )
  
 };
