@@ -17,4 +17,3 @@
    http://localhost:3000
    La aplicación de React debería estar en funcionamiento y lista para ser utilizada.
 
-¡Ahora has clonado con éxito el repositorio de GitHub que contiene un cliente de Apollo, React y GraphQL, y lo has ejecutado en tu entorno local utilizando Yarn! Puedes interactuar con la aplicación de React y realizar solicitudes a tu servidor GraphQL. Asegúrate de que tu servidor GraphQL esté en funcionamiento y accesible desde la aplicación de React para que puedas obtener los datos correctamente.
