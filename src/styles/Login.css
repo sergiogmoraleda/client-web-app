@@ -1,47 +1,18 @@
-.container {
-    margin-top: 50px;
+.rotating-image {
+  position: relative;
+  top: -60px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 80px;
+  height: 80px;
+  animation: rotate 4s linear infinite;
+}
+
+@keyframes rotate {
+  from {
+    transform: translateX(-50%) rotate(0deg);
   }
-  
-  .form-group {
-    margin-bottom: 20px;
+  to {
+    transform: translateX(-50%) rotate(360deg);
   }
-  
-  .btn-primary {
-    background-color: #128b53;
-    border-color: #128b53;
-  }
-  
-  .btn-primary:hover {
-    background-color: #128b53;
-    border-color: #128b53;
-  }
-  
-  .btn-link {
-    color: #128b53;
-  }
-  
-  .btn-link:hover {
-    color: #128b53;
-    text-decoration: underline;
-  }
-  .image-container {
-    position: relative;
-    align-self: center;
-    top: 0;
-    left: 47%;
-    transform: translateX(-50%);
-    animation: rotate 5s linear infinite;
-    width: 160px; /* Ajusta el tamaño deseado */
-    height: 160px; /* Ajusta el tamaño deseado */
-    margin-bottom:40px;
-  }
-  
-  @keyframes rotate {
-    0% {
-      transform: translateX(-50%) rotate(0deg);
-    }
-    100% {
-      transform: translateX(-50%) rotate(360deg);
-    }
-  }
-  
+}

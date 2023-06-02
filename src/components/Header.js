@@ -1,33 +1,31 @@
 import React from "react";
-import { Link, useNavigate } from "react-router-dom";
+import { Link, NavLink, useLocation } from "react-router-dom";
 import { AUTH_TOKEN } from "../constants";
 import "../styles/Header.css";
 
 const Header = () => {
   const authToken = localStorage.getItem(AUTH_TOKEN);
-  const navigate = useNavigate();
+  const location = useLocation();
 
   const handleLogout = () => {
     localStorage.removeItem(AUTH_TOKEN);
-    navigate("/");
   };
 
   return (
-    <div>
+    <div className="headerContainer">
       <nav className="navMenu">
-        <Link to="/home">Home</Link>
-        <Link to="/cuenta">User</Link>
+        <NavLink to="/home" activeClassName="activeLink">Home</NavLink>
+        <NavLink to="/topusers" activeClassName="activeLink">Top {}</NavLink>
+        <NavLink to="/search" activeClassName="activeLink">Search</NavLink>
+
         {authToken ? (
-          <Link
-            to="/home"
-            onClick={handleLogout}
-          >
-            Logout
+          <Link to="/" onClick={handleLogout} className="ml1">
+            Exit
           </Link>
         ) : (
-          <Link to="/login" className="ml1 no-underline black">
+          <NavLink to="/login" activeClassName="activeLink" className="ml1 no-underline black">
             Login
-          </Link>
+          </NavLink>
         )}
         <div className="dot"></div>
       </nav>

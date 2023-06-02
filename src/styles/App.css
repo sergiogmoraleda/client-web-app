@@ -4,6 +4,17 @@
   position: relative;
 
 }
+.app-container {
+  display: flex;
+  min-height: 100vh;
+  flex-direction: column;
+}
+
+.background-gray {
+  flex: 1;
+  background-color: #f2f2f2;
+}
+
 
 .App-logo {
   height: 40vmin;

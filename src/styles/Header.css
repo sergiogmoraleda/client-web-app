@@ -11,7 +11,11 @@ body {
   font-family: "Montserrat", sans-serif;
 }
 
-  
+.headerContainer {
+  display: flex;
+  justify-content: center;
+}
+
 .navMenu {
   position: relative;
   
@@ -24,6 +28,7 @@ body {
   -webkit-transform: translate(-50%, -50%);
   transform: translate(-50%, -50%);
 }
+
 
 .navMenu a {
   color: #f6f4e6;
@@ -39,6 +44,9 @@ body {
 
 .navMenu a:hover {
   color: #128b53;
+}
+.navMenu > .ml1 {
+  margin-left: 10px; /* Ajusta el valor según sea necesario */
 }
 
 .navMenu .dot {
